@@ -12,7 +12,7 @@
     
     <div class="flex flex-col lg:flex-row gap-12">
       <div class="lg:w-1/2">
-        <form class="bg-white p-8 rounded-lg shadow-md">
+        <form  id="contact-form" class="bg-white p-8 rounded-lg shadow-md ">
           <div class="mb-6">
             <label for="name" class="block text-gray-700 font-medium mb-2">Nombre Completo</label>
             <input 
@@ -72,6 +72,12 @@
               required
             ></textarea>
           </div>
+
+          
+            <div id="form-status" class="hidden mb-4">
+              <p></p>
+            </div>
+          
           
           <button 
             type="submit" 
@@ -167,3 +173,63 @@
     </div>
   </div>
 </section>
+
+
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement;
+  const formStatus = document.getElementById('form-status');
+  const statusText = formStatus?.querySelector('p');
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    if (!form || !formStatus || !statusText) return;
+
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    // Disable form and show loading state
+    form.querySelectorAll('input, textarea, button').forEach((el) => {
+      (el as HTMLElement).setAttribute('disabled', 'true');
+    });
+    formStatus.classList.remove('hidden');
+    statusText.textContent = 'Enviando mensaje...';
+    formStatus.className = 'mb-4 text-gray-600';
+
+    try {
+      const response = await fetch('/api/sendEmail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (result.error) {
+        throw new Error(result.error);
+      }
+
+      // Show success message
+      form.reset();
+      statusText.textContent = '¡Mensaje enviado con éxito!';
+      formStatus.className = 'mb-4 text-green-600';
+
+      // Reset form after 3 seconds
+      setTimeout(() => {
+        formStatus.classList.add('hidden');
+      }, 3000);
+    } catch (error) {
+      // Show error message
+      statusText.textContent = 'Error al enviar el mensaje. Por favor, intente nuevamente.';
+      formStatus.className = 'mb-4 text-red-600';
+    } finally {
+      // Re-enable form
+      form.querySelectorAll('input, textarea, button').forEach((el) => {
+        (el as HTMLElement).removeAttribute('disabled');
+      });
+    }
+  });
+</script>
