@@ -1,0 +1,53 @@
+---
+import { Image } from 'astro:assets';
+import civilImg from '../assets/images/legal.jpg';
+import familyImg from '../assets/images/family.jpg';
+import workImg from '../assets/images/work.jpg';
+import penalImg from '../assets/images/penal.jpg';
+
+const services = [
+  {
+    title: "Derecho Civil",
+    description: "Asesoramiento en contratos, responsabilidad civil, propiedad, obligaciones y derechos reales. Representación en litigios civiles y resolución de conflictos.",
+    img: civilImg
+  },
+  {
+    title: "Derecho de Familia",
+    description: "Especialistas en divorcios, custodia de menores, pensiones alimenticias, adopciones y protección patrimonial familiar. Mediación y resolución de conflictos familiares.",
+    img: familyImg
+  },
+  {
+    title: "Derecho Laboral",
+    description: "Asesoramiento en contratos laborales, despidos, indemnizaciones, accidentes laborales y negociaciones colectivas. Defensa de los derechos del trabajador.",
+    img: workImg
+  },
+  {
+    title: "Derecho Penal",
+    description: "Defensa en casos de delitos, representación en juicios penales, asesoramiento en procedimientos penales y recursos de apelación. Defensa de sus derechos ante la justicia.",
+    img: penalImg
+  }
+];
+---
+
+<section id="servicios" class="py-16 md:py-36 bg-primary">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl  text-accent mb-4">Nuestros Servicios</h2>
+      <p class="text-white text-xl max-w-4xl mx-auto tracking-wide">
+        Ofrecemos una amplia gama de servicios legales para satisfacer todas sus necesidades. 
+        Nuestro equipo de profesionales está preparado para asesorarle en cualquier situación legal.
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      {services.map(service => (
+        <div class="bg-gray-500 bg-opacity-10 p-4 rounded-lg shadow-lg hover:shadow-lg transition-shadow">
+          <Image src={service.img} alt={service.title} class="w-full h-48 object-cover rounded-lg mb-4" />
+          <h3 class="text-xl font-bold text-accent mb-2 tracking-wide">{service.title}</h3>
+
+          <p class="text-white tracking-wider text-[16px]">{service.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,169 @@
+---
+---
+<section id="contacto" class="py-16 md:py-36 bg-orange-50">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-primary mb-4 tracking-wide">Contacto</h2>
+      <p class="text-gray-600 text-xl  max-w-2xl mx-auto tracking-wide">
+        Estamos aquí para ayudarle. Complete el formulario a continuación para programar una consulta gratuita 
+        o para obtener más información sobre nuestros servicios.
+      </p>
+    </div>
+    
+    <div class="flex flex-col lg:flex-row gap-12">
+      <div class="lg:w-1/2">
+        <form class="bg-white p-8 rounded-lg shadow-md">
+          <div class="mb-6">
+            <label for="name" class="block text-gray-700 font-medium mb-2">Nombre Completo</label>
+            <input 
+              type="text" 
+              id="name" 
+              name="name" 
+              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+              required
+            />
+          </div>
+          
+          <div class="mb-6">
+            <label for="email" class="block text-gray-700 font-medium mb-2">Correo Electrónico</label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+              required
+            />
+          </div>
+          
+          <div class="mb-6">
+            <label for="phone" class="block text-gray-700 font-medium mb-2">Teléfono</label>
+            <input 
+              type="tel" 
+              id="phone" 
+              name="phone" 
+              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+            />
+          </div>
+          
+          <div class="mb-6">
+            <label for="service" class="block text-gray-700 font-medium mb-2">Servicio de Interés</label>
+            <select 
+              id="service" 
+              name="service" 
+              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+            >
+              <option value="">Seleccione un servicio</option>
+              <option value="civil">Derecho Civil</option>
+              <option value="penal">Derecho Penal</option>
+              <option value="mercantil">Derecho Mercantil</option>
+              <option value="laboral">Derecho Laboral</option>
+              <option value="administrativo">Derecho Administrativo</option>
+              <option value="mediacion">Mediación</option>
+            </select>
+          </div>
+          
+          <div class="mb-6">
+            <label for="message" class="block text-gray-700 font-medium mb-2">Mensaje</label>
+            <textarea 
+              id="message" 
+              name="message" 
+              rows="5" 
+              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+              required
+            ></textarea>
+          </div>
+          
+          <button 
+            type="submit" 
+            class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-3 px-6 rounded-md transition-colors"
+          >
+            Enviar Mensaje
+          </button>
+        </form>
+      </div>
+      
+      <div class="lg:w-1/2">
+        <div class="bg-white p-8 rounded-lg shadow-md h-full">
+          <h3 class="text-xl font-bold text-primary mb-6">Información de Contacto</h3>
+          
+          <div class="space-y-6">
+            <div class="flex items-start">
+              <div class="text-primary mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-700">Dirección</h4>
+                <p class="text-gray-600">Calle Maria Ester Garay N* 150 of 2, Peñaflor.</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="text-primary mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-700">Teléfono</h4>
+                <p class="text-gray-600">(+569)872 38 486</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="text-primary mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-700">Email</h4>
+                <p class="text-gray-600">jose.sanchez@sysabogadopenaflor.cl</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="text-primary mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-700">Horario de Atención</h4>
+                <p class="text-gray-600">Lunes a Viernes: 9:00 - 14:30</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="text-primary">
+              
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-700 text-xl py-2">Valores de Atención</h4>
+                <p class="text-gray-600"><span class="font-bold">Presencial:</span> $20.000 + IVA</p>
+                <p class="text-gray-600"><span class="font-bold">Online:</span> $10.000 + IVA</p>
+                <p class="text-gray-600"><span class="text-red-600 font-bold">Importante:</span> El estudio no hace asesorías por redes sociales, por teléfono o por correo electrónico.</p>
+              </div>
+            </div>
+            
+            <div class="mt-0">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3777.1286668456037!2d-70.90153282370906!3d-33.6095895056809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662e6ae9d2aedfb%3A0xb810038f14a1e881!2sMar%C3%ADa%20Ester%20Garay%20150%2C%20of%202%2C%209750385%20Penaflor%2C%20Pe%C3%B1aflor%2C%20Regi%C3%B3n%20Metropolitana!5e1!3m2!1ses-419!2scl!4v1741276133249!5m2!1ses-419!2scl"
+                width="100%"
+                height="160"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

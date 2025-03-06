@@ -1,0 +1,25 @@
+---
+import {Image} from 'astro:assets';
+import logo from '../assets/images/logo-sys2.webp';
+---
+
+<footer class="bg-gray-800 text-white py-16 md:py-36">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <Image src={logo} alt="SyS Abogados Peñaflor" class="w-26" />
+          <p>© {new Date().getFullYear()} Todos los derechos reservados.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-4">Contacto</h3>
+          <p class="mb-2">Calle Maria Ester Garay N* 150 of 2, Peñaflor.</p>
+          <p class="mb-2">Teléfono:(+569)87238486</p>
+          <p>Email: jose.sanchez@sysabogadopenaflor.cl</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-4">Horario</h3>
+          <p class="mb-2">Lunes a Viernes: 9:00 - 14:30</p>
+        </div>
+      </div>
+    </div>
+  </footer>

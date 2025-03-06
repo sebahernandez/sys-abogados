@@ -1,0 +1,84 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { AstroFont } from "astro-font";
+
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Oficina de abogados especializado en derecho civil y penal" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <AstroFont
+     config={[
+      {
+        src: [],
+        name: "EB Garamond",
+        googleFontsURL: 'https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap',
+        preload: true,
+        display: "swap",
+        selector: "body",
+        fallback: "serif",
+      },
+    ]}
+     />
+    <title>{title}</title>
+  
+  </head>
+  <body class="min-h-screen bg-orange-50">
+    
+    <Header />
+      <main>
+        <slot />
+      </main>
+    <Footer />
+    
+
+    <script>
+      // Mobile menu toggle
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll<HTMLAnchorElement>('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (this: HTMLAnchorElement, e: Event) {
+      e.preventDefault();
+
+    const targetId = this.getAttribute('href');
+    if (!targetId || targetId === '#') return;
+
+        const targetElement = document.querySelector(targetId) as HTMLElement | null;
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth'
+          });
+
+          // Close mobile menu if open
+          const mobileMenu = document.querySelector('.mobile-menu') as HTMLElement | null;
+          if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+          }
+        }
+    });
+});
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+---
+import {Image} from 'astro:assets';
+import logo from '../assets/images/logo-sys2.webp';
+---
+
+<header class="fixed top-0 left-0 w-full bg-primary/70 backdrop-blur-md text-white shadow-md z-50">
+    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+      <!-- Logo a la izquierda -->
+      <a href="/" class="text-2xl font-serif font-bold flex items-center">
+        <Image src={logo} alt="SyS Abogados Peñaflor" class="w-16" />
+      </a>
+      
+      <!-- Menú centrado -->
+      <nav class="hidden md:flex flex-1 justify-center">
+        <ul class="flex space-x-8 text-xl">
+          <li><a href="/" class="hover:text-accent transition-colors">Inicio</a></li>
+          <li><a href="#sobre-mi" class="hover:text-accent transition-colors">Nosotros</a></li>
+          <li><a href="#servicios" class="hover:text-accent transition-colors">Servicios</a></li>
+          <li><a href="#contacto" class="hover:text-accent transition-colors">Contacto</a></li>
+        </ul>
+      </nav>
+      
+      <!-- Botones a la derecha -->
+      <div class="hidden md:flex space-x-4">
+        <a href="#contacto" class="px-6 py-2 rounded-full border border-accent text-accent font-semibold hover:bg-accent hover:text-black transition shadow-sm">
+          Contactar
+        </a>
+      </div>
+
+      
+      <!-- Botón de menú móvil -->
+      <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </div>
+  
+    <!-- Menú móvil -->
+    <div id="mobile-menu" class="hidden md:hidden bg-primary/90 backdrop-blur-md">
+      <ul class="flex flex-col px-4 py-2 text-xl">
+        <li><a href="/" class="block py-2 hover:text-accent transition-colors">Inicio</a></li>
+        <li><a href="#sobre-mi" class="block py-2 hover:text-accent transition-colors">Nosotros</a></li>
+        <li><a href="#servicios" class="block py-2 hover:text-accent transition-colors">Servicios</a></li>
+        <li><a href="#contacto" class="block py-2 hover:text-accent transition-colors">Contacto</a></li>
+        <li><a href="#contacto" class="block text-center px-6 py-2 rounded-full border  border-accent text-accent font-semibold hover:bg-accent hover:text-white transition shadow-sm">
+          Contactars
+        </a></li>
+      </ul>
+    </div>
+  </header>
+  

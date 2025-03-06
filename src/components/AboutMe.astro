@@ -1,0 +1,47 @@
+---
+import {Image} from 'astro:assets';
+import Abogado from '../assets/images/abogado-josemiguel.jpg'
+---
+<section id="sobre-mi" class="py-16 md:py-36 ">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-col md:flex-row items-center gap-12">
+      <div class="md:w-1/2 flex justify-center relative">
+        <Image
+          src={Abogado}
+          alt="Abogado profesional en Peñaflor - José Miguel Sánchez Berrios"
+          class="rounded-lg shadow-lg w-96 h-auto object-cover relative"
+        />
+      </div>
+      
+      <div class="md:w-1/2 text-xl">
+        <h3 class="text-3xl font-semibold text-black mb-4 tracking-wider">Abogado José Miguel Sánchez Berrios</h3>
+        <p class="text-gray-600 mb-6 tracking-wide">
+          En el enero del año 2019, después de trabajar muchos años en la oficina del gran abogado Ramón Carrillo, decido emprender y abrir mi propia oficina. 
+          Esta oficina se caracteriza por a la atención personalizada hacia los clientes, durante este periodo se han conocido múltiples causas y 
+          diversos problemas que hemos logrado solucionar para alegría de nuestros representados.
+        </p>
+        <p class="text-gray-600 mb-6 tracking-wide">
+          En esta oficina nos destacamos por trabajar en equipo con otros colegas, resolver de manera rápida y eficiente los problemas de nuestro cliente 
+          agotando todos los medios para poder resolver sus problemas.
+        </p>
+        <div class="flex flex-wrap gap-4">
+           <div class="bg-gray-800 p-4 rounded-lg flex-1 min-w-[150px] flex items-center">
+            <img src="../images/finis-terrae.webp" alt="finis terrae" class="w-8 md:w-16 h-auto" />
+            <div class="flex flex-col ml-4"> 
+              <h4 class=" text-accent">Educación</h4>
+              <p class="text-white text-sm">Facultad de Derecho Finis Terrae</p>
+            </div>
+          </div>
+          <div class="bg-gray-800 p-4 rounded-lg flex-1 min-w-[150px]">
+            <h4 class=" text-accent">Experiencia</h4>
+            <p class="text-white text-sm">+10 años en asesoría legal y atención personalizada.</p>
+          </div>
+          <div class="bg-gray-800 p-4 rounded-lg flex-1 min-w-[150px]">
+            <h4 class=" text-accent">Casos</h4>
+            <p class="text-white text-sm">+100 casos exitosos y clientes satisfechos</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
