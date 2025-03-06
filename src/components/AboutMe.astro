@@ -1,6 +1,7 @@
 ---
 import {Image} from 'astro:assets';
 import Abogado from '../assets/images/abogado-josemiguel.jpg'
+import Finis from '../assets/images/finis-terrae.webp'
 ---
 <section id="sobre-mi" class="py-16 md:py-36 ">
   <div class="container mx-auto px-4">
@@ -26,7 +27,7 @@ import Abogado from '../assets/images/abogado-josemiguel.jpg'
         </p>
         <div class="flex flex-wrap gap-4">
            <div class="bg-gray-800 p-4 rounded-lg flex-1 min-w-[150px] flex items-center">
-            <img src="/images/finis-terrae.webp" alt="finis terrae" class="w-8 md:w-16 h-auto" />
+            <Image src={Finis} alt="finis terrae" class="w-8 md:w-16 h-auto" />
             <div class="flex flex-col ml-4"> 
               <h4 class=" text-accent">Educación</h4>
               <p class="text-white text-sm">Facultad de Derecho Finis Terrae</p>

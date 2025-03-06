@@ -9,5 +9,4 @@ export default defineConfig({
   integrations: [tailwind(), icon()],
   output: "server",
   adapter: vercel(),
-  base: "/",
 });
