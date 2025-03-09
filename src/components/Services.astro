@@ -4,6 +4,9 @@ import civilImg from '../assets/images/legal.jpg';
 import familyImg from '../assets/images/family.jpg';
 import workImg from '../assets/images/work.jpg';
 import penalImg from '../assets/images/penal.jpg';
+import lawHome from '../assets/images/law-home.jpg';
+import lawBrand from '../assets/images/law-brand.jpg';
+
 
 const services = [
   {
@@ -25,6 +28,16 @@ const services = [
     title: "Derecho Penal",
     description: "Defensa en casos de delitos, representación en juicios penales, asesoramiento en procedimientos penales y recursos de apelación. Defensa de sus derechos ante la justicia.",
     img: penalImg
+  },
+  {
+    title: "Derecho Inmobiliario",
+    description: "Brindamos orientación experta en transacciones inmobiliarias, arrendamientos, desahucios, propiedad horizontal y conflictos de vecindad. Protegemos sus intereses en el ámbito inmobiliario.",
+    img: lawHome
+  }, 
+  {
+    title:"Inscripción de marcas comerciales",
+    description:"Para proteger su prestigio, trayectoria y su negocio, conviene inscribir su marca",
+    img:lawBrand
   }
 ];
 ---
@@ -39,7 +52,7 @@ const services = [
       </p>
     </div>
     
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       {services.map(service => (
         <div class="bg-gray-500 bg-opacity-10 p-4 rounded-lg shadow-lg hover:shadow-lg transition-shadow">
           <Image src={service.img} alt={service.title} class="w-full h-48 object-cover rounded-lg mb-4" />
